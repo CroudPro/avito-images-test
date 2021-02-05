@@ -1,0 +1,58 @@
+.modal-mobile {
+
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow: hidden;
+  z-index:1;
+  height: 100%;
+  width:100%;
+  background-color: white;
+  .modal-mobile__image {
+
+    max-width: 100%;
+    margin-bottom:20px;
+
+  }
+  .modal-mobile__comments {
+    margin-left:22px;
+    .comment {
+      margin-bottom: 20px;
+      .date {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 15px;
+        margin-bottom: 5px;
+        color: #999999;
+      }
+      p {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 15px;
+
+
+        color: #000000;
+      }
+    }
+  }
+  .modal__input {
+    margin-left:22px;
+    margin-right:22px;
+  }
+  .modal__button {
+    margin-left:22px;
+    margin-right:22px;
+  }
+  .modal__close {
+    position: absolute;
+    left:89%;
+    top:2%;
+
+  }
+
+
+}
