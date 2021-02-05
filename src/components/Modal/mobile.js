@@ -10,7 +10,8 @@ function Mobile({fullImageInfo, ApplyNewComment, setCommentData, commentData, se
                     <line x1="0.646447" y1="18.6464" x2="18.6464" y2="0.646446" stroke="black"/>
                 </svg>
             </div>
-
+            {fullImageInfo ? (<img src={fullImageInfo.url} alt="Img" className="modal-mobile__image"/>) : (
+                <img src="https://via.placeholder.com/150" alt="Img" className="modal-mobile__image"/>)}
             <div className="modal-mobile__comments">
                 {fullImageInfo && fullImageInfo.comments.map((comment) => (
 
