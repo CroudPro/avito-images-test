@@ -1,19 +1,28 @@
 import React from 'react';
 
-function Desktop({modalWindow,fullImageInfo,ApplyNewComment,setCommentData,commentData,setNameData,nameData,closeModal }) {
+function Desktop({
+                     modalWindow,
+                     fullImageInfo,
+                     ApplyNewComment,
+                     setCommentData,
+                     commentData,
+                     setNameData,
+                     nameData,
+                     closeModal
+                 }) {
     return (
         <React.Fragment>
-            <div className="screen-wrapper"></div>
+            <div className="screen-wrapper" />
             <div className="modal" ref={modalWindow}>
 
                 <div className="modal__left">
-                    {fullImageInfo && (<img src={fullImageInfo.url} alt="Img" className="modal__image"/>)}
-                    {!fullImageInfo && <img src="https://via.placeholder.com/150" alt="Img" className="modal__image"/>}
+                    {fullImageInfo ? <img src={fullImageInfo.url} alt="Img" className="modal__image"/> :
+                        <img src="https://via.placeholder.com/150" alt="Img" className="modal__image"/>}
                     <input className="modal__input" type="text" placeholder="Ваше имя" value={nameData}
                            onChange={(e) => setNameData(e.target.value)}/>
                     <input className="modal__input" type="text" placeholder="Ваш комментарий" value={commentData}
                            onChange={(e) => setCommentData(e.target.value)}/>
-                    < button className="modal__button" onClick={ApplyNewComment}>Оставить комментарий</button>
+                    <button className="modal__button" onClick={ApplyNewComment}>Оставить комментарий</button>
                 </div>
                 <div className="modal__right">
                     {fullImageInfo && fullImageInfo.comments.map((comment) => (
