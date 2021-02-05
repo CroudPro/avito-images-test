@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./mobile.scss"
 
 function Mobile({fullImageInfo, ApplyNewComment, setCommentData, commentData, setNameData, nameData, closeModal}) {
+    useEffect(() => {
+        document.body.style.overflow = 'hidden';
+        return ()=> {
+            document.body.style.overflow = 'unset';
+        }
+    }, []);
     return (
         <div className=" modal-mobile">
             <div className="modal__close" onClick={closeModal}>
